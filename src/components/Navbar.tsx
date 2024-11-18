@@ -93,6 +93,23 @@ const Navbar = () => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
   return (
+    <>
+    <div className="w-full bg-white border-b text-sm py-2 px-8">
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <div>
+          <span className="text-gray-700">Free shipping on international orders of $150+</span>
+        </div>
+        <div className="flex items-center space-x-8 text-gray-700">
+          <span>102 Princes Street, Toronto</span>
+          <a 
+            href="mailto:esmee@qodeinteractive.com" 
+            className="hover:text-gray-900 transition-colors"
+          >
+            esmee@qodeinteractive.com
+          </a>
+        </div>
+      </div>
+    </div>
     <nav className="fixed top-0 left-0 right-0 bg-white z-50">
       {/* Desktop Navigation */}
       <div className="hidden lg:flex justify-between items-center pl-8 py-4 border-b">
@@ -198,6 +215,8 @@ const Navbar = () => {
         </div>
       )}
     </nav>
+    </>
+
   );
 };
 
